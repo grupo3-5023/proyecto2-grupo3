@@ -4,4 +4,4 @@
 |-------------|------------------|-----------------------------------|
 | Román       |                  |git config --local user.name       |
 | Didac       |                  |git config --local user.email      |
-| (miembro C) |                  |                                   |
+| Pol         |                  |git commit -m "Añade fila de C en la tabla de miembros" |
