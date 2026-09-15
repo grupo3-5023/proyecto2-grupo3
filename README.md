@@ -3,5 +3,5 @@
 | Miembro     | Rol en el equipo | Comando Git que más te ha costado |
 |-------------|------------------|-----------------------------------|
 | Román       |                  |git config --local user.name       |
-| (miembro B) |                  |                                   |
+| Didac       |                  |git config --local user.email      |
 | (miembro C) |                  |                                   |
