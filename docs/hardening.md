@@ -10,7 +10,7 @@ Estado global: 0/3 completado
 
 - [ ] (ítem B, pendiente)
 - [X] (Marcar ítem C)
-Última revisión: Pol - 18:12
+
 
 - [X] (Marcar el ítem B)
 - [ ] (ítem C, pendiente)
