@@ -5,7 +5,7 @@ Estado global: 1/3 completado
 
 - [X] (Marcar item A)
 
-- [X] (Marcar ítem B)
+- [X] (Punto verificado correctamente)
 
 - [X] (Marcar ítem C)
 
