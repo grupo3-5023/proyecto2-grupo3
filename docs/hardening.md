@@ -10,6 +10,6 @@ Estado global: 3/3 completado
 - [X] (Marcar ítem C)
 
 
-Última revisión: Didac - 18:32, Pol - 18:35, Román - 18:36
+Última revisión: Pol - revision final 19:56
 
 
