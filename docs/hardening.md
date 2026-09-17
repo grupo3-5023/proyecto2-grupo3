@@ -10,6 +10,5 @@ Estado global: 3/3 completado
 - [X] (Marcar ítem C)
 
 
-Última revisión: Roman - revision final 19:54
-
+Última revisión: Pol - revision final 19:56, Roman - revision final 20:00
 
