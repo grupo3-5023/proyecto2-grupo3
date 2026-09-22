@@ -96,3 +96,28 @@ de qué fichero es, sin tener que buscarlo a mano.
 ![Miembros y roles](capturas/2.1-miembros.png)
 ![SECURITY.md con última revisión](capturas/2.2-security.png)
 ![Protección de main](capturas/2.3-proteccion.png)
+
+## Preguntas (Román: 1-3)
+
+**1. ¿Por qué el segundo push fue rechazado y qué hace pull por debajo?**
+
+Porque B ya había subido su commit antes que C, entonces cuando C fue a
+subir el suyo, su copia local estaba desactualizada respecto al remoto y
+git no te deja hacer push así. git pull en el fondo hace dos cosas: un
+fetch (trae los commits nuevos sin tocar tu rama) y luego un merge (los
+mete en tu rama local).
+
+**2. Fast-forward vs merge commit en nuestro historial**
+
+La fusión de contacto-a fue fast-forward, porque main no se había movido
+desde que creamos la rama, git solo movió el puntero para adelante sin
+crear commit nuevo. La de contacto-b sí generó un merge commit, porque
+main ya había avanzado y hubo que juntar las dos historias con un commit
+nuevo que tiene dos padres.
+
+**3. Por qué las filas no dan conflicto pero última revisión sí**
+
+Porque cada fila está en una línea distinta, entonces git puede meter los
+cambios de cada uno sin pisarse. Pero última revisión la tocábamos los
+tres a la vez en la misma línea, y ahí git no sabe qué versión quedarse,
+así que toca decidirlo a mano.
