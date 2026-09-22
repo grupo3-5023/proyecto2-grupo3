@@ -121,3 +121,34 @@ Porque cada fila está en una línea distinta, entonces git puede meter los
 cambios de cada uno sin pisarse. Pero última revisión la tocábamos los
 tres a la vez en la misma línea, y ahí git no sabe qué versión quedarse,
 así que toca decidirlo a mano.
+
+## Preguntas (Didac: 4-6) 
+
+**4. Error del push a main protegida**
+
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: - Changes must be made through a pull request.
+! [remote rejected] main -> main (push declined due to repository rule violations)
+
+Lo bloqueó la regla de "Require a pull request before merging" que
+pusimos en main, que no deja hacer push directo a nadie, ni al Admin.
+
+**5. Comando para sacar .env y qué hacer en un caso real**
+
+git rm --cached .env. Lo primero en un caso real sería cambiar la
+contraseña ya mismo, porque hay que asumir que alguien la pudo ver. Y
+luego, si hace falta, limpiar el historial con alguna herramienta tipo
+BFG, porque aunque borres el fichero la contraseña se queda en el commit
+donde se subió al principio, y en un repo público cualquiera puede
+mirar el historial y encontrarla igual.
+
+**6. Qué hace mejor Desktop y qué no puede hacer**
+
+Desktop muestra el diff mucho más claro y con colores, y el gráfico de
+ramas se entiende mejor de un vistazo que con --graph en terminal. Y
+cuando hay conflicto te dice directamente qué fichero es. Pero no te
+deja gestionar roles ni crear la protección de main, ni aprobar PRs,
+eso hay que hacerlo desde la web sí o sí. El conflicto se entendió
+mejor con Desktop, porque te lo marca visual en vez de tener que buscar
+las marcas a mano en el fichero.
+ 
