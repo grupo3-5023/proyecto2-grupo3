@@ -1,4 +1,5 @@
 # Informe — Grupo 3
+
 ## 1.2 — Tipo de merge de contacto-a
 
 Fue fast-forward. Como main no había cambiado desde que creamos la rama,
@@ -34,19 +35,17 @@ remote:
 ! [remote rejected] main -> main (push declined due to repository rule violations)
 error: failed to push some refs to '...'
 
-## 2.5 (extra) — Secret scanning y push protection
+## 2.4 — Conflicto resuelto en el editor web
 
-El Admin activó Secret Protection y Push Protection en la organización.
-Subimos otro .env con un token falso (ghp_1234567890abcdefghijklmnopqrstuvwxyz)
-para ver si lo bloqueaba, y el push pasó sin ningún problema, no lo detectó.
-Suponemos que es porque GitHub no solo mira el prefijo "ghp_", sino que
-valida el formato real del token (longitud y caracteres concretos), y al
-ser uno inventado a mano no encaja con el patrón real, así que no salta
-la alerta.
+También resolvimos un conflicto sin usar terminal ni Desktop, directamente
+en el editor de conflictos que tiene GitHub en la propia PR (botón
+"Resolve conflicts"). Dos ramas cambiaban la misma línea de "Última
+revisión" con texto distinto, y al fusionar la segunda salió el conflicto
+ahí mismo en la web.
 
 ## 2.5 — El secreto
 
-Subimos  un `.env` con una contraseña dentro.
+Subimos un `.env` con una contraseña dentro.
 El revisor lo pilló al mirar los commits de la PR y pidió que se quitara.
 Se sacó del repo con `git rm --cached .env` (sin borrarlo del ordenador) y
 se metió `.env` en el `.gitignore` para que no vuelva a pasar.
@@ -61,6 +60,16 @@ se vea en la versión actual, pero no borra que en algún momento estuvo ahí.
 
 En un caso real lo primero sería cambiar esa contraseña ya, porque hay que
 asumir que la ha podido ver cualquiera.
+
+## 2.5 (extra) — Secret scanning y push protection
+
+El Admin activó Secret Protection y Push Protection en la organización.
+Subimos otro .env con un token falso (ghp_1234567890abcdefghijklmnopqrstuvwxyz)
+para ver si lo bloqueaba, y el push pasó sin ningún problema, no lo detectó.
+Suponemos que es porque GitHub no solo mira el prefijo "ghp_", sino que
+valida el formato real del token (longitud y caracteres concretos), y al
+ser uno inventado a mano no encaja con el patrón real, así que no salta
+la alerta.
 
 ## 3 — Preguntas GitHub Desktop
 
