@@ -8,5 +8,6 @@ Estado global: 3/3 completado Pol, Roman, Didac
 
 - [X] (Marcar ítem C)
 
-Última revisión: Román - editor web
+Última revisión: Román, Pol - editores web
+
 
