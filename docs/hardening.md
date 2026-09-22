@@ -1,6 +1,6 @@
 # Checklist de hardening del servidor web
 
-Estado global: 3/3 completado
+Estado global: 3/3 completado Didac
 
 
 - [X] (Marcar item A)
