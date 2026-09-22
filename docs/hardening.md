@@ -8,5 +8,5 @@ Estado global: 3/3 completado Pol, Roman, Didac
 
 - [X] (Marcar ítem C)
 
-Última revisión: Pol - revision final 19:56, Roman - revision final 20:00
+Última revisión: Pol - editor web
 
