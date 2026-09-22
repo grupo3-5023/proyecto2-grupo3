@@ -151,4 +151,40 @@ deja gestionar roles ni crear la protección de main, ni aprobar PRs,
 eso hay que hacerlo desde la web sí o sí. El conflicto se entendió
 mejor con Desktop, porque te lo marca visual en vez de tener que buscar
 las marcas a mano en el fichero.
+
+## Preguntas (Pol: 7-9)
+ 
+**7. Diferencia Maintain vs Write, y quién quita la protección**
+ 
+Un Maintain puede tocar algunos ajustes del repo (issues, PRs, wiki) sin
+
+llegar a ser admin del todo, mientras que un Write solo puede hacer push
+
+a ramas que no estén protegidas y crear PRs, pero no toca configuración.
+
+Quitar la protección de main solo lo puede hacer el Admin, o sea Román.
+ 
+**8. Qué pasa con un force push a main**
+ 
+Se podría reescribir el historial de main y perder commits de otros
+
+sin dejar rastro. En nuestro repo esto no puede pasar porque activamos
+
+"Block force pushes" en la regla de main, así que lo rechaza directo.
+ 
+**9. Diferencia entre compartir portátil (fase 1) y tener cada uno el suyo (fase 2)**
+ 
+En la fase 1 había que cambiar la identidad local cada vez que le
+
+tocaba a otro, si no todos los commits salían con el mismo nombre. En
+
+la fase 2 cada uno ya tenía su identidad puesta de siempre en su propio
+
+ordenador. Para los conflictos no cambia mucho cómo funciona git en sí,
+
+pero en la fase 1 los conflictos salían al fusionar ramas en el mismo
+
+portátil, y en la fase 2 salían al hacer push/pull entre máquinas
+
+distintas.
  
