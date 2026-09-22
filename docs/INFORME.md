@@ -1,5 +1,48 @@
 # Informe — Grupo 3
+## 1.2 — Tipo de merge de contacto-a
 
+Fue fast-forward. Como main no había cambiado desde que creamos la rama,
+git solo movió el puntero hacia adelante, no tuvo que mezclar nada. Por eso
+en el gráfico no sale como un commit de merge normal, solo sigue en línea
+recta hasta el commit de contacto-a.
+
+## 2.2 — Conflicto en pull
+
+Al hacer push por orden (B, C, A), al segundo y tercero les salió esto:
+
+! [rejected]        main -> main (fetch first)
+error: failed to push some refs to '...'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref.
+
+¿Por qué unos cambios dan conflicto y otros no?
+Porque cada uno tocaba una línea distinta del checklist, así que git las
+junta solo sin problema. Pero la línea de "Última revisión" la tocábamos
+los tres a la vez, entonces git no sabe cuál de las tres versiones dejar
+y por eso salta el conflicto. Si tocas líneas distintas no hay lío, pero
+si tocáis la misma línea, toca resolverlo a mano sí o sí.
+
+## 2.3 — Proteger main
+
+Al intentar subir directo a main (ya protegida) salió este error:
+
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - Changes must be made through a pull request.
+remote:
+! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to '...'
+
+## 2.5 (extra) — Secret scanning y push protection
+
+El Admin activó Secret Protection y Push Protection en la organización.
+Subimos otro .env con un token falso (ghp_1234567890abcdefghijklmnopqrstuvwxyz)
+para ver si lo bloqueaba, y el push pasó sin ningún problema, no lo detectó.
+Suponemos que es porque GitHub no solo mira el prefijo "ghp_", sino que
+valida el formato real del token (longitud y caracteres concretos), y al
+ser uno inventado a mano no encaja con el patrón real, así que no salta
+la alerta.
 
 ## 2.5 — El secreto
 
